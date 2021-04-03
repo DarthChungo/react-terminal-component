@@ -6470,10 +6470,10 @@ iterate-value@^1.0.2:
     es-get-iterator "^1.0.2"
     iterate-iterator "^1.0.1"
 
-javascript-terminal-more@latest:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/javascript-terminal-more/-/javascript-terminal-more-1.0.1.tgz#d4db626a1bfd873274ed5e3bc88397acede5c9d7"
-  integrity sha512-M9OhGzP6nu8NtSfORxC+6yLy7JJ1J7cbUY7SEQLZSOIfppfQYPcmlqJoRIJON5zR0ooTi5XrPpFOXVunpeGhqA==
+javascript-terminal-more@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/javascript-terminal-more/-/javascript-terminal-more-1.0.2.tgz#92a85a1a0d633f19ce908ba7254782392ec4be33"
+  integrity sha512-F6P+nHiaZ+dZXqyBpqDZGt47XBiGdXXZnEoHTSYAXFwsmyB4uGDxVzw6mLfp7fAU/tC0wURvMCK4CA6MxXNuKA==
   dependencies:
     get-options "^1.2.0"
     immutable "^4.0.0-rc.12"
@@ -9855,6 +9855,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typing-effect-reactjs@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/typing-effect-reactjs/-/typing-effect-reactjs-1.4.1.tgz#3f5ae58dc0604beed7fc75a704023d05d0248a2a"
+  integrity sha512-ocrNVj4AYb7LoT6GAq5HB0pG96627rkS7MUIPKAD0pX4Pahb8Ptntxo1suqqCVUVXqj6aTB5IuGv6J5cTn+dHg==
 
 unbox-primitive@^1.0.0:
   version "1.0.1"

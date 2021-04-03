@@ -64,8 +64,9 @@
     "yargs": "^13.2.4"
   },
   "dependencies": {
-    "javascript-terminal-more": "latest",
-    "prop-types": "^15.7.2"
+    "javascript-terminal-more": "^1.0.2",
+    "prop-types": "^15.7.2",
+    "typing-effect-reactjs": "^1.4.1"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
