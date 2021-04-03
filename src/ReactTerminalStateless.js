@@ -2,8 +2,10 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 import {
-  Emulator, HistoryKeyboardPlugin, EmulatorState
-} from 'javascript-terminal';
+  Emulator,
+  HistoryKeyboardPlugin,
+  EmulatorState,
+} from 'javascript-terminal-more';
 import defaultTheme from 'themes/default';
 import CommandInput from 'input/CommandInput';
 import OutputList from 'OutputList';
@@ -11,7 +13,7 @@ import TerminalContainer from 'TerminalContainer';
 import defaultRenderers from 'output';
 
 class TerminalStateless extends Component {
-  constructor({emulatorState}) {
+  constructor({ emulatorState }) {
     super();
 
     this.emulator = new Emulator();
@@ -34,8 +36,8 @@ class TerminalStateless extends Component {
   }
 
   componentDidUpdate() {
-    const {autoFocus} = this.props;
-    
+    const { autoFocus } = this.props;
+
     this.scrollOutput();
 
     if (autoFocus) {
@@ -44,16 +46,18 @@ class TerminalStateless extends Component {
   }
 
   _submitInput = (commandStr) => {
-    const {onStateChange, emulatorState} = this.props;
+    const { onStateChange, emulatorState } = this.props;
     const newState = this.emulator.execute(
-      emulatorState, commandStr, this.plugins
+      emulatorState,
+      commandStr,
+      this.plugins
     );
 
     onStateChange(newState);
-  }
+  };
 
   _setInput(inputStr) {
-    const {onInputChange} = this.props;
+    const { onInputChange } = this.props;
 
     onInputChange(inputStr);
   }
@@ -74,13 +78,14 @@ class TerminalStateless extends Component {
         e.preventDefault();
 
         const autoCompletedStr = this.emulator.autocomplete(
-          this.props.emulatorState, this.props.inputStr
+          this.props.emulatorState,
+          this.props.inputStr
         );
 
         this._setInput(autoCompletedStr);
         break;
     }
-  }
+  };
 
   _onClick = () => {
     if (this.inputRef && !this.dragging) {
@@ -93,9 +98,9 @@ class TerminalStateless extends Component {
     this.dragging = false;
     this.dragStart = {
       x: e.screenX,
-      y: e.screenY
+      y: e.screenY,
     };
-  }
+  };
 
   _onMouseUp = (e) => {
     if (this.dragStart.x === e.screenX && this.dragStart.y === e.screenY) {
@@ -103,13 +108,27 @@ class TerminalStateless extends Component {
     } else {
       // For the next 100ms consider any click event to be part of this drag.
       this.dragging = true;
-      setTimeout(() => { this.isDragging = false; }, 100, this);
+      setTimeout(
+        () => {
+          this.isDragging = false;
+        },
+        100,
+        this
+      );
     }
-  }
+  };
 
   render() {
     const {
-      acceptInput, autoFocus, clickToFocus, emulatorState, inputStr, theme, promptSymbol, outputRenderers, terminalId
+      acceptInput,
+      autoFocus,
+      clickToFocus,
+      emulatorState,
+      inputStr,
+      theme,
+      promptSymbol,
+      outputRenderers,
+      terminalId,
     } = this.props;
     let inputControl, focusProps;
 
@@ -121,14 +140,16 @@ class TerminalStateless extends Component {
       focusProps = {
         onClick: this._onClick,
         onMouseDown: this._onMouseDown,
-        onMouseUp: this._onMouseUp
+        onMouseUp: this._onMouseUp,
       };
     }
 
     if (acceptInput) {
       inputControl = (
         <CommandInput
-          ref={(ref) => { this.inputRef = ref; }}
+          ref={(ref) => {
+            this.inputRef = ref;
+          }}
           autoFocus={autoFocus}
           promptSymbol={promptSymbol}
           value={inputStr}
@@ -143,7 +164,9 @@ class TerminalStateless extends Component {
       <ThemeProvider theme={theme}>
         <TerminalContainer
           className={'terminalContainer'}
-          ref={(ref) => { this.containerRef = ref; }}
+          ref={(ref) => {
+            this.containerRef = ref;
+          }}
           {...focusProps}
         >
           <OutputList
@@ -157,7 +180,7 @@ class TerminalStateless extends Component {
       </ThemeProvider>
     );
   }
-};
+}
 
 // These props are shared with ReactTerminal.
 TerminalStateless.commonPropTypes = {
@@ -167,7 +190,7 @@ TerminalStateless.commonPropTypes = {
   outputRenderers: PropTypes.object,
   promptSymbol: PropTypes.string,
   terminalId: PropTypes.string,
-  theme: PropTypes.object
+  theme: PropTypes.object,
 };
 
 TerminalStateless.propTypes = {
@@ -175,7 +198,7 @@ TerminalStateless.propTypes = {
   emulatorState: PropTypes.object.isRequired,
   inputStr: PropTypes.string.isRequired,
   onInputChange: PropTypes.func.isRequired,
-  onStateChange: PropTypes.func.isRequired
+  onStateChange: PropTypes.func.isRequired,
 };
 
 TerminalStateless.defaultProps = {
@@ -187,7 +210,7 @@ TerminalStateless.defaultProps = {
   outputRenderers: defaultRenderers,
   promptSymbol: '$',
   terminalId: 'terminal01',
-  theme: defaultTheme
+  theme: defaultTheme,
 };
 
 export default TerminalStateless;
