@@ -1,6 +1,6 @@
 {
   "name": "react-terminal-component-next",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React component that renders a terminal emulator, forked from rohanchandra",
   "main": "lib/react-terminal-component.js",
   "scripts": {
@@ -51,7 +51,6 @@
     "babel-preset-react": "^6.24.1",
     "chai": "^4.2.0",
     "cross-env": "^5.2.0",
-    "css-loader": "^5.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^5.16.0",
@@ -66,6 +65,7 @@
     "yargs": "^13.2.4"
   },
   "dependencies": {
+    "css-loader": "^5.2.0",
     "javascript-terminal-more": "^1.0.2",
     "prop-types": "^15.7.2",
     "typing-effect-reactjs": "^1.4.1"
