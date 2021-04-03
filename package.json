@@ -64,7 +64,7 @@
     "yargs": "^13.2.4"
   },
   "dependencies": {
-    "javascript-terminal": "^1.0.3",
+    "javascript-terminal-more": "latest",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
