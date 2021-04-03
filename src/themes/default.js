@@ -3,7 +3,7 @@ const defaultColors = {
   promptSymbolColor: '#6effe6',
   commandColor: '#fcfcfc',
   outputColor: '#fcfcfc',
-  errorOutputColor: '#ff89bd'
+  errorOutputColor: '#ff89bd',
 };
 
 export default {
@@ -12,5 +12,7 @@ export default {
   spacing: '1%',
   fontFamily: 'monospace',
   height: '50vh',
-  width: '100%'
+  width: '100%',
+  whiteSpace: 'normal !important',
+  wordWrap: 'break-word !important',
 };
