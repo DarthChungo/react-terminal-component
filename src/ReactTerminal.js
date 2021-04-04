@@ -9,7 +9,8 @@ class Terminal extends Component {
 
     this.state = {
       emulatorState,
-      inputStr
+      inputStr,
+      showInput
     };
   }
 
@@ -33,17 +34,21 @@ class Terminal extends Component {
   }
 
   _onInputChange = (inputStr) => {
-    this.setState({inputStr});
+    this.setState({inputStr});6
   }
 
   _onStateChange = (emulatorState) => {
     this.setState({emulatorState, inputStr: ''});
   }
 
+  setShowInput(doIt) {
+    this.setState({showInput: doIt});
+  }
+
   render() {
     // eslint-disable-next-line no-unused-vars
     const {emulatorState: removedEmulatorState, inputStr: removedInputStr, ...otherProps} = this.props;
-    const {emulatorState, inputStr} = this.state;
+    const {emulatorState, inputStr, showInput } = this.state;
 
     // We're using the spread operator to pass along all props to the child componentm
     // except for emulatorState and inputStr which must come from the state.
@@ -51,6 +56,7 @@ class Terminal extends Component {
       <ReactTerminalStateless
         {...otherProps}
         emulatorState={emulatorState}
+        acceptInput={showInput}
         inputStr={inputStr}
         onInputChange={this._onInputChange}
         onStateChange={this._onStateChange}
