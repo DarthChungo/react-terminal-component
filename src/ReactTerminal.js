@@ -10,7 +10,7 @@ class Terminal extends Component {
     this.state = {
       emulatorState,
       inputStr,
-      showInput
+      showInput: true
     };
   }
 
