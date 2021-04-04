@@ -45,7 +45,7 @@ class TerminalStateless extends Component {
     }
   }
 
-  _submitInput = (commandStr, errStr = 'ERR', silent = false) => {
+  _submitInput = (commandStr, silent = false, errStr = 'ERROR') => {
     const { onStateChange, emulatorState } = this.props;
     const newState = this.emulator.execute(
       emulatorState,
