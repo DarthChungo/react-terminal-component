@@ -1,6 +1,6 @@
 import React from 'react';
-import { Typing } from 'typing-effect-reactjs';
+import { TypingStep } from 'typing-effect-reactjs';
 
-const TypingContainer = ({ content }) => <Typing text={content}></Typing>;
+const TypingContainer = ({ sequence }) => <TypingStep sequence={sequence} element="div"></TypingStep>;
 
 export default TypingContainer;

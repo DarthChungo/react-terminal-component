@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import TypingContainer from 'output/TypingContainer';
 
 const TypingOutput = ({ content }) => (
-  <TypingContainer content={content}></TypingContainer>
-);
+  <TypingContainer sequence={content}></TypingContainer>
+);a
 
 TypingOutput.propTypes = {
-  content: PropTypes.string.isRequired,
+  content: PropTypes.array.isRequired
 };
 
 export default TypingOutput;
