@@ -1,6 +1,7 @@
 const defaultColors = {
   background: '#141313',
   promptSymbolColor: '#6effe6',
+  outputPromptSymbolColor: '#141313',
   commandColor: '#fcfcfc',
   outputColor: '#fcfcfc',
   errorOutputColor: '#ff89bd',
@@ -13,6 +14,6 @@ export default {
   fontFamily: 'monospace',
   height: '50vh',
   width: '100%',
-  whiteSpace: 'normal !important',
-  wordWrap: 'break-word !important',
+  whiteSpace: 'normal',
+  wordWrap: 'break-word',
 };
