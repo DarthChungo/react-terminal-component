@@ -144,7 +144,7 @@ class TerminalStateless extends Component {
       };
     }
 
-    if (acceptInput) {
+    if (acceptInput && emulatorState.getShowInput()) {
       inputControl = (
         <CommandInput
           ref={(ref) => {
