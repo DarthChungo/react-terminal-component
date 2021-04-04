@@ -4,7 +4,7 @@ import TypingContainer from 'output/TypingContainer';
 
 const TypingOutput = ({ content }) => (
   <TypingContainer sequence={content}></TypingContainer>
-);a
+);
 
 TypingOutput.propTypes = {
   content: PropTypes.array.isRequired
