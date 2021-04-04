@@ -118,6 +118,10 @@ class TerminalStateless extends Component {
     }
   };
 
+  getEmulator() {
+    return this.emulator;
+  }
+
   render() {
     const {
       acceptInput,

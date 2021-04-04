@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import ReactTerminalStateless from 'ReactTerminalStateless';
 import TerminalStateless from './ReactTerminalStateless';
@@ -12,6 +12,8 @@ class Terminal extends Component {
       inputStr,
       showInput: true
     };
+
+    this.childRef = createRef();
   }
 
   _init(props) {
@@ -45,6 +47,10 @@ class Terminal extends Component {
     this.setState({showInput: doIt});
   }
 
+  getEmulator() {
+    return this.childRef.current.getEmulator();
+  }
+
   render() {
     // eslint-disable-next-line no-unused-vars
     const {emulatorState: removedEmulatorState, inputStr: removedInputStr, ...otherProps} = this.props;
@@ -55,6 +61,7 @@ class Terminal extends Component {
     return (
       <ReactTerminalStateless
         {...otherProps}
+        ref={this.childRef}
         emulatorState={emulatorState}
         acceptInput={showInput}
         inputStr={inputStr}
