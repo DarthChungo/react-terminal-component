@@ -36,7 +36,7 @@ class Terminal extends Component {
   }
 
   _onInputChange = (inputStr) => {
-    this.setState({inputStr});6
+    this.setState({inputStr});
   }
 
   _onStateChange = (emulatorState) => {
