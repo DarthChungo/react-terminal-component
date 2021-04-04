@@ -6499,9 +6499,9 @@ iterate-value@^1.0.2:
     iterate-iterator "^1.0.1"
 
 javascript-terminal-more@^1.0.2:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/javascript-terminal-more/-/javascript-terminal-more-1.2.1.tgz#d53d2f2f67b9ef701c807dd92ccda9b0f685a29a"
-  integrity sha512-dvcN9rB4hmZDbnEolosbmWdIlhk2Yx9y54V5F3zMr4pXciHWqPum7v2DyIaaMKmPCCk0qf+osx5Ooe6x4N1QWQ==
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/javascript-terminal-more/-/javascript-terminal-more-1.2.2.tgz#566f3b667c7110cc7b27d30e35de4ac366442ab1"
+  integrity sha512-8IAVZH56YX7UXvbuD3lKTPLYEZxfK/+msnYLAUksLGzeRrTmjZv3ErF+nX5Mz3K0nbsHtuGu3+sQmIhl1zXL4Q==
   dependencies:
     get-options "^1.2.0"
     immutable "^4.0.0-rc.12"
