@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const LinkOutput = ({ content }) => {
+function LinkOutput({ content }) {
   window.location.replace(content);
   return React.createElement();
 };

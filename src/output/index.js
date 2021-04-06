@@ -4,7 +4,7 @@ import TextErrorOutput from 'output/TextErrorOutput';
 import HeaderOutput from 'output/HeaderOutput';
 import ImageOutput from 'output/ImageOutput';
 import TypingOutput from 'output/TypingOutput'
-import LinkOutput from './LinkOutput';
+import LinkOutput from 'output/LinkOutput';
 
 export default {
   [OutputType.TEXT_OUTPUT_TYPE]: TextOutput,
