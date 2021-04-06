@@ -1,6 +1,6 @@
 {
   "name": "react-terminal-component-next",
-  "version": "1.2.9",
+  "version": "1.3.0",
   "description": "React component that renders a terminal emulator, forked from rohanchandra",
   "main": "lib/react-terminal-component.js",
   "scripts": {
