@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 function LinkOutput({ content }) {
   window.location.replace(content);
-  return React.createElement();
+  return React.createElement("div");
 };
 
 TextErrorOutput.propTypes = {
