@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LinkContainer from './LinkContainer';
 
 
-const LinkOutput = ({ content }) => (
-  <LinkContainer content={content}></LinkContainer>
-);
+const LinkOutput = ({ content }) => {
+  window.location.replace(content);
+  return React.createElement();
+};
 
 TextErrorOutput.propTypes = {
   content: PropTypes.string.isRequired
