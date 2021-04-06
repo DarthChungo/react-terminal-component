@@ -7,7 +7,7 @@ function LinkOutput({ content }) {
   return React.createElement("div");
 };
 
-TextErrorOutput.propTypes = {
+LinkOutput.propTypes = {
   content: PropTypes.string.isRequired
 };
 
